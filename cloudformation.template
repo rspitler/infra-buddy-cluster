@@ -187,10 +187,7 @@
     },
     "EcsElasticLoadBalancer": {
       "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
-      "Properties": {
-        "ConnectionSettings": {
-            "IdleTimeout": 120
-        },
+      "Properties": 
         "Scheme": "internet-facing",
         "Subnets": [
           {
