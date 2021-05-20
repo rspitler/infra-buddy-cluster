@@ -313,6 +313,13 @@
         "HealthCheckTimeoutSeconds": 10,
         "HealthyThresholdCount": 5,
         "UnhealthyThresholdCount": 2,
+        "TargetType":{
+                "Fn::If": [
+                  "UseCluster",
+                  "instance",
+                  "ip"
+                ]
+              },
         "TargetGroupAttributes": [
           {
             "Key": "deregistration_delay.timeout_seconds",
